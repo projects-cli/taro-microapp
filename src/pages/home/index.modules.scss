@@ -1,5 +1,251 @@
-@import '@/styles/tabbar.scss';
+.home-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 
-.me-page {
+  .container {
+    flex: 1;
 
+    :global {
+      .at-tabs__item {
+        font-size: 28px;
+      }
+
+      .at-tabs__item--active {
+        color: #05CBF9;
+        font-size: 35px;
+      }
+
+      .at-tabs__item-underline {
+        background-color: transparent;
+      }
+    }
+
+    .tab-item-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .introduction-wrap {
+        padding: 39px 48px 0;
+        width: 100%;
+        height: 324px;
+        box-sizing: border-box;
+        background-image: url(../../static/images/home/introduction-bg.png);
+        background-size: 100% 100%;
+
+        .introduction {
+          font-size: 30px;
+          font-weight: 400;
+          color: #FFFFFF;
+          line-height: 44px;
+          overflow : hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+        }
+
+      }
+
+      .major {
+        margin-top: -112px;
+        border-bottom: 16px solid #F1F1F1;
+
+        .major-list {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .major-item {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 32px;
+            padding: 24px 0 0 48px;
+            width: 670px;
+            height: 160px;
+            background: #FFFFFF;
+            box-shadow: 0px 0px 8px 0px rgba(118, 118, 118, 0.3);
+            border-radius: 8px;
+            background-image: url(../../static/images/home/major-item-bg.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: left bottom;
+
+            text {
+              &:first-child {
+                font-size: 38px;
+                font-weight: 600;
+                color: #333333;
+                line-height: 53px;
+              }
+
+              &:last-child {
+                font-size: 24px;
+                font-weight: 400;
+                color: #989898;
+                line-height: 33px;
+              }
+            }
+          }
+        }
+
+        .major-more {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-right: 44px;
+          width: 100vw;
+          height: 88px;
+          border-top: 2px solid #F1F1F1;
+          font-size: 28px;
+          font-weight: 400;
+          color: #666666;
+          line-height: 40px;
+
+          &::after {
+            display: block;
+            content: '';
+            margin-left: 16px;
+            width: 28px;
+            height: 16px;
+            background-image: url(../../static/images/home/arrow.png);
+            background-size: 100%;
+          }
+        }
+      }
+
+      .personality-test {
+        margin: 32px 0 56px;
+        width: 686px;
+        height: 106px;
+      }
+
+      .school {
+        width: 686px;
+
+        .title {
+          font-size: 38px;
+          font-weight: 600;
+          color: #333333;
+          line-height: 53px;
+        }
+
+        .school-list {
+
+          .school-item {
+            margin-top: 32px;
+            padding: 32px 32px 16px;
+            width: 686px;
+            box-sizing: border-box;
+            background: #FFFFFF;
+            box-shadow: 0px 0px 8px 0px rgba(118, 118, 118, 0.3);
+            border-radius: 8px;
+            border-bottom: 16px solid #05CBF9;
+
+            .info-wrap {
+              display: flex;
+              margin-bottom: 19px;
+
+              image {
+                width: 114px;
+                height: 114px;
+                flex-shrink: 0;
+              }
+
+              .info {
+                display: flex;
+                flex-direction: column;
+                margin-left: 18px;
+
+                text {
+                  font-size: 24px;
+                  font-weight: 400;
+                  color: #989898;
+                  line-height: 33px;
+
+                  &:first-child {
+                    font-size: 32px;
+                    font-weight: 600;
+                    color: #333333;
+                    line-height: 45px;
+                  }
+
+                  &:last-child {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 15px;
+
+                    &::before {
+                      display: block;
+                      content: '';
+                      margin-right: 10px;
+                      width: 15px;
+                      height: 22px;
+                      background-image: url(../../static/images/home/location.png);
+                      background-size: 100%;
+                      background-repeat: no-repeat;
+                    }
+                  }
+                }
+              }
+            }
+
+            .tag-list {
+              display: flex;
+              overflow-y: auto;
+
+              .tag-item {
+                flex-shrink: 0;
+                margin-right: 24px;
+                padding: 0 18px;
+                height: 48px;
+                background: #F3F6F9;
+                border-radius: 24px;
+
+                &:last-child {
+                  margin-right: 0;
+                }
+              }
+            }
+
+            .ranking {
+              display: flex;
+              margin-top: 32px;
+              padding-top: 16px;
+              border-top: 2px solid #f1f1f1;
+
+              .ranking-item {
+                display: flex;
+                align-items: center;
+                width: 299px;
+
+                view {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  font-size: 22px;
+                  font-family: Arial-Black, Arial;
+                  font-weight: 900;
+                  color: #333333;
+                  width: 94px;
+                  height: 94px;
+                  background-image: url(../../static/images/home/ranking.png);
+                  background-size: 100% 100%;
+                }
+
+                text {
+                  margin-left: 15px;
+                  font-size: 26px;
+                  font-weight: 600;
+                  color: #666666;
+                  line-height: 37px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,8 +1,8 @@
 {
   "miniprogramRoot": "./dist",
-  "projectname": "major",
-  "description": "野菠萝小程序、h5",
-  "appid": "touristappid",
+  "projectname": "查专业",
+  "description": "myoffer查专业小程序",
+  "appid": "wxe43531a2e21b4709",
   "setting": {
     "urlCheck": true,
     "es6": false,

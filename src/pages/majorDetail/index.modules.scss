@@ -1,0 +1,211 @@
+@mixin content {
+  margin: 14px 32px 37px;
+  font-size: 32px;
+  font-weight: 400;
+  color: #666666;
+  line-height: 60px;
+}
+
+.major-page {
+  display: flex;
+  flex-direction: column;
+
+  .major-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 168px;
+    width: 100%;
+    background-image: url(../../static/images/major/major-bg.png);
+    background-size: 100% 100%;
+
+    text {
+      font-size: 38px;
+      font-weight: 600;
+      color: #FFFFFF;
+      line-height: 53px;
+      text-shadow: 0px 2px 12px rgba(0, 0, 0, 0.68);
+
+      &:last-child {
+        font-size: 26px;
+        font-weight: 400;
+        color: #E1E1E1;
+        line-height: 37px;
+      }
+    }
+  }
+
+  .main-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    position: relative;
+    margin: 35px 0 32px;
+    width: 502px;
+    height: 80px;
+    background: rgba(239, 242, 245, 0.73);
+    border-radius: 18px;
+    font-size: 32px;
+    font-weight: 400;
+    color: #333333;
+    line-height: 45px;
+
+    &::before, &::after {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      display: block;
+      content: '';
+      width: 46px;
+      height: 38px;
+      background-image: url(../../static/images/major/right.png);
+      background-size: 100%;
+    }
+
+    &::before {
+      left: -14px;
+    }
+
+    &::after {
+      right: -14px;
+      background-image: url(../../static/images/major/left.png);
+    }
+
+    text {
+      font-weight: 600;
+    }
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 32px;
+    height: 100px;
+    font-size: 38px;
+    font-weight: 600;
+    color: #333333;
+    line-height: 53px;
+
+    &::before {
+      display: block;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 42px;
+      height: 100px;
+      background-image: url(../../static/images/major/title-bg.png);
+      background-size: 100% 100%;
+    }
+  }
+
+  .introduce {
+    padding-bottom: 40px;
+    border-bottom: 1px solid #F1F1F1;
+    @include content();
+  }
+
+  .course-list {
+    align-self: center;
+    margin-top: 14px;
+    margin-bottom: 37px;
+    width: 686px;
+    border: 8px solid #F1F1F1;
+    border-radius: 32px;
+
+    .course-item {
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      padding-left: 56px;
+      height: 104px;
+      border-bottom: 2px #F1F1F1 solid;
+
+      &:last-child {
+        border-bottom-color: transparent;
+      }
+
+      text {
+        font-size: 28px;
+
+        &:first-child {
+          flex-shrink: 0;
+          font-weight: 600;
+          color: #333333;
+          line-height: 40px;
+        }
+
+        &:last-child {
+          margin-left: 32px;
+          font-weight: 400;
+          color: #989898;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+
+  .training-direction {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+    @include content();
+    border-bottom: 2px #F1F1F1 solid;
+
+    text {
+      margin-bottom: 64px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .employment-situation {
+    margin-bottom: 110px;
+
+    .item {
+      display: flex;
+      margin: 14px 32px 32px;
+      font-size: 32px;
+      font-weight: 600;
+      color: #05CBF9;
+      line-height: 45px;
+
+      text {
+        &:first-child {
+          flex-shrink: 0;
+        }
+
+        &:last-child {
+          color: #666666;
+        }
+      }
+    }
+    .content {
+      @include content();
+    }
+  }
+
+  .related-institutions {
+    position: fixed;
+    bottom: 66px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 478px;
+    height: 88px;
+    background: #05CBF9;
+    box-shadow: 0px 0px 16px 0px rgba(152, 152, 152, 0.53);
+    border-radius: 8px;
+    font-size: 32px;
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+}

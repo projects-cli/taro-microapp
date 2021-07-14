@@ -1,0 +1,14 @@
+.welcome-page {
+  image {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  button {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
